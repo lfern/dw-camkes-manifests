@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+     Copyright 2015, NICTA
+     Copyright 2019, DornerWorks
+
+     This software may be distributed and modified according to the terms of
+     the BSD 2-Clause license. Note that NO WARRANTY is provided.
+     See "LICENSE_BSD2.txt" for details.
+
+     @TAG(DORNERWORKS_NICTA_BSD)
+  -->
+
+
+<!--  VERSIONS
+
+      10.1.1 seL4 Kernel
+      3.7 CAmkES
+-->
+
+<manifest>
+
+    <remote name="seL4"
+        fetch="https://github.com/seL4"
+    />
+
+    <remote name="dw"
+        fetch="http://github.com/dornerworks"
+    />
+
+    <remote name="seL4-projects"
+        fetch="https://github.com/SEL4PROJ"
+    />
+
+
+    <!-- default revision for each project, and name of the remote -->
+    <default revision="10.1.x-compatible"
+        remote="seL4"
+    />
+    <project name="camkes-arm-vm.git" path="projects/camkes-arm-vm" revision="6e2bba84ee6ee34907092bab3d3940921bf8f4cb" upstream="master" dest-branch="master"/>
+    <project name="camkes-tool.git" path="projects/camkes-tool" revision="4bc72046d804516ac2eec18981025dc58ff78622" upstream="master" dest-branch="master">
+      <linkfile src="docs/index.md" dest="camkes_README.md"/>
+    </project>
+    <project name="camkes-vm-images.git" path="projects/camkes-vm-images" revision="ede9814678d87adfc8d175c743283ea7844ae4ad" upstream="master" dest-branch="master"/>
+    <project name="camkes-vm-linux.git" path="projects/camkes-vm-linux" revision="a9d79657b3f01fabfa2692f815be7276d97c9b85" upstream="master" dest-branch="master"/>
+    <project name="camkes-vm.git" path="projects/camkes-vm" revision="0174554598846ac73257bf006250f47a8f73d80c" upstream="master" dest-branch="master"/>
+    <project name="capdl.git" path="projects/capdl" revision="0e2d06ef04a7e4b47f7dc1d83eceee7e81ed2b00" upstream="master" dest-branch="master"/>
+    <project name="global-components.git" path="projects/global-components" revision="02133497ed126910ec0f4ddb98b997e481d91ffa" upstream="master" dest-branch="master"/>
+    <project name="musllibc.git" path="projects/musllibc" revision="c7aa943a2ad4fccaccf52a1f957bf8860f57f5b0" upstream="sel4" dest-branch="sel4"/>
+    <project name="projects_libs.git" path="projects/projects_libs" revision="3b5c4cdf9e1753c76d0c797cf70c90307714f94d" upstream="master" dest-branch="master"/>
+    <project name="seL4.git" path="kernel" revision="ad4ea6cd08ec316085a95f4d3785367d5a23c926" upstream="master" dest-branch="master"/>
+    <project name="seL4_libs.git" path="projects/seL4_libs" revision="cf104b85d7db7996618ec39df6f137b5be500ced" upstream="master" dest-branch="master"/>
+    <project name="seL4_projects_libs.git" path="projects/seL4_projects_libs" revision="2e30fdeb1d32f1ac252c94b8d6dcf2b9f4ee17b5" upstream="master" dest-branch="master"/>
+    <project name="seL4_tools.git" path="tools/seL4" revision="f0ca8fc0fe4bc6749a0479fa9233adb7e4db118e" upstream="master" dest-branch="master">
+      <linkfile src="cmake-tool/griddle" dest="griddle"/>
+      <linkfile src="cmake-tool/init-build.sh" dest="init-build.sh"/>
+    </project>
+    <project name="sel4runtime.git" path="projects/sel4runtime" revision="e1c51c9b506708398bb1ffbf9098ae82855d3c14" upstream="master" dest-branch="master"/>
+    <project name="util_libs.git" path="projects/util_libs" revision="c446df1f1a3e6aa1418a64a8f4db1ec615eae3c4" upstream="master" dest-branch="master"/>
+
+  <!-- HTTP Server Application -->
+    <project remote="dw" name="dw-camkes-apps" path="projects/dw-apps" revision="http_server-10.1"/>
+  
+  
+  
+  
+  
+
+    
+
+    <!-- tool for removing excess functions from C code -->
+    <!-- project name="pruner.git" path="tools/pruner" revision="master"/ -->
+
+    
+
+</manifest>
